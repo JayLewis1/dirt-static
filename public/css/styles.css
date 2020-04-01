@@ -786,7 +786,7 @@ td {
 
 
 /* contact */
-.contact {
+#contact {
   display: grid;
   grid-template-columns: 40% 60%;
 
