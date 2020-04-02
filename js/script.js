@@ -149,6 +149,7 @@ const fullCon = document.getElementById("fullCon");
 const videoFl = document.getElementById("videoFl");
 const col = document.getElementById("collection");
 
+const urlInfo = "?autoplay=0&showinfo=0&controls=0&rel=0$enablejsapi=1&modestbranding=1"
 const fullVideo = (e) => {
 
   if (window.screen.width > "643px") {
@@ -158,10 +159,11 @@ const fullVideo = (e) => {
   } else {
     var name = event.srcElement.getElementsByClassName("colSource")[0].src;
     col.scrollIntoView();
-    vidSrc.src = name;
+    videoFl.src = name + urlInfo;
 
-    videoFl.load();
-    videoFl.play();
+    console.log(event.srcElement);
+    // videoFl.load();
+    // videoFl.play();
 
 
     fullCon.style.display = "block";
