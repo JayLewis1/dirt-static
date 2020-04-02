@@ -22,7 +22,7 @@ const whatsA = () => {
 }
 whatsA();
 const trackInit = () => {
-  source.src = "/assets/audio/" + songs[a];
+  source.src = "assets/audio/" + songs[a];
   player.load();
   document.getElementById("currentSong").innerText = "Damn that river - Live Bristol 21/09/19";
 }
@@ -39,7 +39,7 @@ const playAudio = () => {
 // Loop songs once they've finished
 player.addEventListener('ended', () => {
   a = a + 1;
-  source.src = "/assets/audio/" + songs[a];
+  source.src = "assets/audio/" + songs[a];
   player.load();
   player.play();
   return a;
@@ -52,7 +52,7 @@ const next = () => {
   } else if (a == 4) {
     a = 0;
   }
-  source.src = "/assets/audio/" + songs[a++];
+  source.src = "assets/audio/" + songs[a++];
   if (player.paused) {
     player.play();
     play.setAttribute("id", "pause");
@@ -65,7 +65,7 @@ const lastTrack = () => {
   if (a == -1) {
     a = 3;
   }
-  source.src = "/assets/audio/" + songs[a--];
+  source.src = "assets/audio/" + songs[a--];
   if (player.paused) {
     player.play();
     play.setAttribute("id", "pause");
@@ -76,7 +76,7 @@ const lastTrack = () => {
   // console.log(a);
 }
 if (player.currentTime == player.duration) {
-  source.src = "/assets/audio/" + songs[a++];
+  source.src = "assets/audio/" + songs[a++];
 }
 
 // Progress bar
